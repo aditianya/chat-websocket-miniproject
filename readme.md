@@ -1,0 +1,5 @@
+This project is a real-time chat application built using Node.js, Express and Socket.IO. Express serves the frontend files from the public directory, and Socket.IO is attached to the HTTP server to manage persistent client connections.
+
+When a client connects, the server records its socket ID in a Set and broadcasts the updated number of connected clients. When a user sends a message, the server listens for the message event and forwards the payload to other connected clients using socket.broadcast.emit. The project also uses a separate feedback event for typing-related feedback.
+
+This project helped me understand event-driven communication, client-server architecture, broadcasting, connection lifecycle management and the difference between HTTP request-response communication and real-time communication.
